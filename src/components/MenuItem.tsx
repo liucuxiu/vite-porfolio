@@ -16,7 +16,7 @@ const MenuItem = ({ icon, label, to }: MenuItemProps) => {
          _hover={{ color: '#f86767'}}>
       <HStack>
         <Box as={icon} boxSize={6} />
-        <Scrollink to={to}>
+        <Scrollink to={to} smooth={true}>
           {label}
         </Scrollink>
       </HStack>

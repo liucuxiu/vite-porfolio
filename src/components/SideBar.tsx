@@ -21,9 +21,6 @@ const SideBar = () => {
 
       </VStack>
     </Box>
-
-
-
   )
 }
 

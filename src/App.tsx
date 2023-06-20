@@ -1,25 +1,13 @@
-import { Box, Grid } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
 import SideBar from './components/SideBar';
+import Content from './components/Content';
 
 function App() {
 
   return (
     <Grid display="flex" >
       <SideBar />
-      <Box marginLeft="500px">
-        <section id="home" style={{ height: '1000px' }}>
-          home
-        </section>
-        <section id="about" style={{ height: '1000px' }}>
-          about
-        </section>
-        <section id="experience" style={{ height: '1000px' }}>
-          experience
-        </section>
-        <section id="contact" style={{ height: '1000px' }}>
-          contact
-        </section>
-      </Box>
+      <Content/>
     </Grid>
   )
 }
