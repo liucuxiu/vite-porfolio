@@ -1,8 +1,21 @@
 import { Box, Button, Card, CardBody, CardFooter, Heading, Image, Stack, Text } from '@chakra-ui/react';
 
 import avatar from '../assets/avatar.jpg';
+import CV from '../assets/CV.pdf';
 
 const About = () => {
+  const downloadCV = () => {
+    fetch(CV).then(response => {
+      response.blob().then(blob => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = '[CV]_PhanMinhTu_SE.pdf';
+        alink.click();
+      })
+    })
+  }
+
   return (
     <Box height={1000} id="about" paddingTop={200} paddingLeft={200} width={1000}>
       <Card
@@ -27,7 +40,7 @@ const About = () => {
           </CardBody>
 
           <CardFooter>
-            <Button variant='solid' bgColor="#f86767" color="white">
+            <Button variant='solid' bgColor="#f86767" color="white" onClick={downloadCV}>
               Download CV
             </Button>
           </CardFooter>
