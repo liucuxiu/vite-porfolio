@@ -8,13 +8,9 @@ const Content = () => {
   return (
     <Box marginLeft="500px" width='full'>
       <Home/>
-
       <About/>
-
+      <Experience />
       <Contact/>
-
-      <Experience/>
-
     </Box>
   )
 
